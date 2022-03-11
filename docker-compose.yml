@@ -38,14 +38,7 @@ services:
     depends_on:
       - db
     environment:
-      - DJANGO_DB=default
-      - POSTGRE_NAME=postgres
-      - POSTGRE_USER=wxqrdriettiqki
-      - POSTGRE_PASSWORD=7b502771393e69214f12e549c0e03ba9719bbd2cf0739a5c6b3c34015e257128
-      - POSTGRE_PORT=5432
-      - POSTGRE_HOST=ec2-50-16-108-41.compute-1.amazonaws.com
-      - LABEL_STUDIO_HOST=${LABEL_STUDIO_HOST:-}
-      - LABEL_STUDIO_COPY_STATIC_DATA=true
+
     volumes:
       - ./mydata:/label-studio/data:rw
       # keep in sync with deploy/docker-entrypoint.d/30-copy-static-data.sh
